@@ -93,11 +93,11 @@ execute_process(
     OUTPUT_VARIABLE arch_flag_lines
     OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-try_compile(
-    HAVE_RVV_INTRINSICS
-    ${CMAKE_BINARY_DIR}
-    ${CMAKE_SOURCE_DIR}/cmake/Checks/check-rvv-intrinsics.c
-)
+# try_compile(
+#     HAVE_RVV_INTRINSICS
+#     ${CMAKE_BINARY_DIR}
+#     ${CMAKE_SOURCE_DIR}/cmake/Checks/check-rvv-intrinsics.c
+# )
 if(HAVE_RVV_INTRINSICS)
     message(STATUS "Checking RVV intrinsics - found")
 else()

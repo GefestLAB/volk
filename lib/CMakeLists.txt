@@ -578,7 +578,7 @@ endif()
 #be used to create the target import information. Ordering of the
 #include directories is taken as provided; it -might- matter, but
 #probably doesn't.
-add_library(volk SHARED $<TARGET_OBJECTS:volk_obj>)
+add_library(volk STATIC $<TARGET_OBJECTS:volk_obj>)
 target_link_libraries(volk PUBLIC ${volk_libraries})
 if(VOLK_CPU_FEATURES)
     target_link_libraries(volk PRIVATE $<BUILD_INTERFACE:CpuFeatures::cpu_features>)
